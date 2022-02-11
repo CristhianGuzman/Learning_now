@@ -1,0 +1,67 @@
+.form-group{
+    margin-top: 15px;
+}
+
+.btn-link{
+
+    color: #089ca4;
+    text-decoration: None;
+    
+    font-size: 16px;
+    
+    
+}
+
+
+.form-group input{
+    
+    font-size: 12px;
+    border-radius: 2px;
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+    
+}
+
+
+.is-invalid {
+    border-style: dotted;
+    
+}
+
+
+
+.logo{
+    width: 100px;
+    height: 100px;
+    
+}
+
+
+#boton1{
+    background-color: #089ca4;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+label{
+    font-size: 16px;
+    color: #000000;
+}
+
+
+h3{
+    color: #089ca4;
+}
+
+
+h6{
+    color: #089ca4;
+}
+
+
+
