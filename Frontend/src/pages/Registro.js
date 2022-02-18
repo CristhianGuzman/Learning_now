@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import "./login-user.css";
-import Logo from "../../assets/img/Logo.png"
+import "../assets/styles.css";
+import Logo from "../assets/img/Logo.png"
 
 import {
     Link, useHistory
@@ -168,7 +168,7 @@ function RegisterUser() {
                             </div>
                             <div className="d-flex justify-content-center align-items-center mt-4">
                                 <button type="submit"
-                                    className="btn col-12 mx-3" id="boton1">
+                                    className="btn col-12 mx-3 boton">
                                     Registrarse</button>
                             </div>
                             <div className="text-center">

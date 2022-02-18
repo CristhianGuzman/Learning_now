@@ -6,10 +6,7 @@
 
     color: #089ca4;
     text-decoration: None;
-    
     font-size: 16px;
-    
-    
 }
 
 
@@ -17,7 +14,7 @@
     
     font-size: 12px;
     border-radius: 2px;
-    font-family: "font awesome 5 free";
+    font-family: "font awesome 6 free";
     font-weight: 900;
     
 }
@@ -32,12 +29,17 @@
 
 .logo{
     width: 100px;
-    height: 100px;
-    
+    height: 100px; 
+}
+
+.icono{
+
+    width: 20px;
+    height: 20px; 
 }
 
 
-#boton1{
+.boton{
     background-color: #089ca4;
     color: #ffffff;
 }
@@ -65,3 +67,22 @@ h6{
 
 
 
+.h5{
+    color: #089CA4;
+}
+
+.footer{
+    background-color:#84CED2;
+    color: white;
+}
+
+.navbar-expand-lg{
+    background-color:#089CA4;
+}
+
+.boton2{
+    background-color:#089CA4;
+    border-radius: 2px;
+    color: #c8d4d4;
+
+}
