@@ -15,7 +15,7 @@ function Home() {
 
 
 
-    const [usuario ,setUsuario] = useState('sssjwww');
+    const [usuario,setUsuario] = useState({});
 
 
 
@@ -25,7 +25,7 @@ function Home() {
     useEffect(() => {
 
         setUsuario(JSON.parse(localStorage.getItem('data')));
-        console.log(usuario)
+        
        
 
     }, [])
@@ -35,7 +35,7 @@ function Home() {
         <div>
             <div>
                 <div className="row mb-5">
-                    <Navbar user={usuario}/>
+                    <Navbar user={usuario && usuario}/>
                 </div>
 
                 <div className="row mb-2">

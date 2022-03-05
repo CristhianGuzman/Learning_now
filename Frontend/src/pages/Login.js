@@ -53,6 +53,7 @@ function LoginUser() {
 
     function handleChange(name, value) {
     //captura los cambios efectuados a los campos de texto del formulario de login
+        console.log(value)
         if (name === "usuario") {
             console.log(value)
             setUser(value)
