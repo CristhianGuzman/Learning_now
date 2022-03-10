@@ -8,28 +8,76 @@ function Gestion_contenido() {
 
 
 
-    const [videos, setVideos] = useState([])
 
-    
 
-    
-    function handleClick(){
-        if(validFields){
 
+
+
+    const [formCurso, setFormCurso] = useState({
+        titulo: '',
+        descripcion: '',
+        imagen: {}
+    })
+
+
+    function handleChange(name, value) {
+        console.log(value )
+        if (name == 'titulo_curso') {
+            setFormCurso({
+                ...formCurso,
+                titulo: value
+            })
+        }else {
+            setFormCurso({
+                ...formCurso,
+                descripcion: value
+            })
         }
+    }
+
+    async function handleClick() {
         
+        const data = new FormData()
+        data.append('titulo', formCurso.titulo)
+        data.append('descripcion', formCurso.descripcion)
+        data.append('imagen', formCurso.imagen.file)
 
+        const response = await fetch('http://localhost:5002/cursos', {
+            method: 'PUT',
+            body: data,
+        })
+
+        if (response.ok) {
+            alert('usuario creado')
+        }
+    }
+
+
+    function cargarImagen(e) {
+
+        const file = e.target.files[0]
+        const fileReader = new FileReader()
+        fileReader.readAsDataURL(file)
+
+        fileReader.addEventListener('load', (e) => {
+            setFormCurso({
+                ...formCurso,
+                imagen: {
+                    img: e.target.result,
+                    file: file
+                }
+            })
+        })
+    }
+
+
+
+    function validFields() {
 
     }
 
 
 
-    function validFields(){
-
-    }
-    
-
-    
 
 
 
@@ -61,8 +109,8 @@ function Gestion_contenido() {
                     </div>
 
                     <div className="ps-5">
-                        <Form_Curso ></Form_Curso>
-                        <button onClick={(e)=>handleClick(e)}><i class="fa-solid fa-floppy-disk"></i></button>
+                        <Form_Curso formCurso={formCurso} handleChange={handleChange} cargarImagen={cargarImagen}></Form_Curso>
+                        <button onClick={() => handleClick()}><i class="fa-solid fa-floppy-disk"></i></button>
                     </div>
 
                 </div>

@@ -1,7 +1,7 @@
 
 const router = require('express').Router()
-const { response } = require('express');
 const { Pool } = require('pg');
+
 
 
 const pool = new Pool({
@@ -12,6 +12,7 @@ const pool = new Pool({
     database: 'USERS'
 
 });
+
 
 
 
@@ -55,6 +56,7 @@ const createUser = async (req, res) => {
 
 
 
+
 router.post('/', (req, res) => {
     getUser(req, res);
 })
@@ -63,6 +65,8 @@ router.post('/', (req, res) => {
 router.put('/', (req, res) => {
     createUser(req, res);
 })
+
+
 
 
 module.exports = router

@@ -106,7 +106,7 @@ function RegisterUser() {
             window.location = '/'*/
 
             alert('usuario creado')
-            window.location.href = "./inicio"
+            window.location.href = "./"
         }
 
     }
