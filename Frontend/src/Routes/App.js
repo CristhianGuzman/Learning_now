@@ -7,6 +7,9 @@ import Contenido from '../pages/Contenido';
 import Que_ofrecemos from '../pages/Que_ofrecemos'; 
 import Mis_cursos from '../pages/Mis_cursos'
 import Contactenos from '../pages/Contactenos'
+import Contenido_Student from '../pages/Contenido_Student';
+import MiAprendizaje from '../pages/MiAprendizaje';
+import Matricula from '../pages/Matricula';
 
 
 import React, { useContext, useState } from 'react';
@@ -47,6 +50,11 @@ function App() {
                     <Route exact path='/login'><Login/></Route>
                     <Route exact path='/ofertas'><Que_ofrecemos/></Route>
                     <Route exact path='/contactenos'><Contactenos/> </Route>
+
+                    <Route exact path='/contenidostudent'><Contenido_Student /></Route>
+                    <Route exact path='/matricula'><Matricula /></Route>
+                    <Route exact path='/miaprendizaje'><MiAprendizaje /></Route>
+
                     
                 </Switch>
 
